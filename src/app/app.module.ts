@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -20,7 +22,8 @@ import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
     MatCheckboxModule,
     BrowserAnimationsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
