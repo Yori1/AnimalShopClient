@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AnimalDetailService } from './animal-detail.service';
+import { Animal } from 'src/app/models/animal';
+
 
 @Component({
   selector: 'app-animal-detail',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnimalDetailComponent implements OnInit {
 
-  constructor() { }
+  private animal: Animal;
+
+  constructor(
+    private animalDetailService: AnimalDetailService
+  ) { 
+    
+  }
 
   ngOnInit() {
+
   }
 
 }
