@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http'; 
 import { AdvertisementDetailComponent } from './advertisement-detail.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 describe('AdvertisementDetailComponent', () => {
   let component: AdvertisementDetailComponent;
@@ -8,18 +9,20 @@ describe('AdvertisementDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientModule, AppRoutingModule],
       declarations: [ AdvertisementDetailComponent ]
     })
     .compileComponents();
-  }));
-
-  beforeEach(() => {
     fixture = TestBed.createComponent(AdvertisementDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
+  }));
 
+  /*
+  calls api
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  */
 });
