@@ -38,7 +38,11 @@ RUN ng build --output-path=dist
 ############
 
 # base image
-FROM nginx:1.16.0-alpine
+
+FROM nginx:1.17.3
+
+COPY default.conf.template /etc/nginx/conf.d/default.conf.template
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # copy artifact build from the 'build environment'
 COPY --from=build /app/dist /usr/share/nginx/html
@@ -48,5 +52,4 @@ COPY --from=build /app/dist /usr/share/nginx/html
 #no expose for heroku, assigned dynamically
 
 # run nginx
-CMD sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
-
+CMD /bin/bash -c "envsubst '\$PORT' < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf" && nginx -g 'daemon off;'
