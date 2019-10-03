@@ -1,6 +1,14 @@
 server {
   listen $PORT default_server;
 
+
+        root /var/www/example.com/html;
+
+    index index.html index.htm index.nginx-debian.html;
+
+        server_name animalshop-client.herokuapp.com https://animalshop-client.herokuapp.com https://www.animalshop-client.herokuapp.com;
+
+
   location / {
     try_files $uri $uri/ /index.html;
   }
