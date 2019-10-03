@@ -48,7 +48,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /app/dist /usr/share/nginx/html
 
 # expose port 4200
-# EXPOSE 4200
+# @EXPOSE 4200
 #no expose for heroku, assigned dynamically
 
 # run nginx
