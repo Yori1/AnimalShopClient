@@ -6,10 +6,11 @@ server {
 
     index index.html index.htm index.nginx-debian.html;
 
-        server_name animalshop-client.herokuapp.com https://animalshop-client.herokuapp.com https://www.animalshop-client.herokuapp.com;
+        server_name https://animalshop-client.herokuapp.com/;
 
 
   location / {
-        try_files $uri $uri/ =404;
+                try_files $uri $uri/ /index.html;
+
   }
 }

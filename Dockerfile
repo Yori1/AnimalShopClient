@@ -31,7 +31,7 @@ RUN ng test --watch=false
 #RUN ng e2e --port 4202
 
 # generate build
-RUN ng build --output-path=dist
+RUN ng build --prod --base-href https://animalshop-client.herokuapp.com/ --output-path=dist
 
 ############
 ### prod ###
