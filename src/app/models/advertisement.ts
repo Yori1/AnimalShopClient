@@ -6,9 +6,8 @@ export class Advertisement implements IAdvertisement {
         public id: number,
         public description: String,
         public price: number,
-        public animalBeingSold: Animal,
-       public imageUrl: string
-    ){}
+        public animalBeingSold: Animal
+            ){}//
 
 
 }
