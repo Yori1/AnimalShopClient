@@ -14,20 +14,27 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AdvertisementDetailComponent } from './advertisement-detail/advertisement-detail.component';
 
 import { HttpClientModule } from '@angular/common/http'; 
-import { AnimalDetailComponent } from './advertisement-detail/animal-detail/animal-detail.component';
 
 import { CommonModule } from '@angular/common';  
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import {MatIconModule} from '@angular/material/icon';
+import { TopMenuComponent } from './top-menu/top-menu.component';
+import { AdvertisementPostingComponent } from './advertisement-posting/advertisement-posting.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AnimalDetailComponent,
-    AdvertisementDetailComponent
+    AdvertisementDetailComponent,
+    TopMenuComponent,
+    AdvertisementPostingComponent
   ],
   imports: [
     BsDropdownModule,
@@ -43,6 +50,9 @@ import {MatIconModule} from '@angular/material/icon';
     AppRoutingModule,
     MatToolbarModule,
     HttpClientModule,
+    MatFormFieldModule,
+    MatSelectModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

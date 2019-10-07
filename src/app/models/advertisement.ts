@@ -1,26 +1,14 @@
 import { Animal } from './animal';
+import { IAdvertisement } from './advertisement-interface'
 
-export class Advertisement {
+export class Advertisement implements IAdvertisement {
     constructor(
-        private _id: number,
-        private _description: String,
-        private _price: number,
-        private _animalBeingSold: Animal
+        public id: number,
+        public description: String,
+        public price: number,
+        public animalBeingSold: Animal,
+       public imageUrl: string
     ){}
 
-    get id(): number {
-        return this._id;
-    }
 
-    get description(): String {
-        return this._description;
-    }
-
-    get price(): number {
-        return this._price;
-    }
-
-    get animalBeingSold(): Animal {
-        return this._animalBeingSold;
-    }
 }
