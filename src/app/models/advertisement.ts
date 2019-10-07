@@ -1,7 +1,6 @@
 import { Animal } from './animal';
-import { IAdvertisement } from './advertisement-interface'
 
-export class Advertisement implements IAdvertisement {
+export class Advertisement  {
     constructor(
         public id: number,
         public description: String,
