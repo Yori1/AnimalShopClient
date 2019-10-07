@@ -7,7 +7,7 @@ export class Advertisement implements IAdvertisement {
         public description: String,
         public price: number,
         public animalBeingSold: Animal
-            ){}
+            ){}//
 
 
 }
