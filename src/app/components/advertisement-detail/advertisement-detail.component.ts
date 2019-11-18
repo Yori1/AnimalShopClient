@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Advertisement } from '../models/advertisement';
 import { AdvertisementDetailService } from './advertisement-detail.service';
 import { ActivatedRoute } from '@angular/router';
+import { Advertisement } from 'src/app/models/advertisement';
 
 @Component({
   selector: 'app-advertisement-detail',
@@ -26,7 +26,7 @@ export class AdvertisementDetailComponent implements OnInit {
         this.advertisement = a;
       })
     });
-    
+
   }
 
 }

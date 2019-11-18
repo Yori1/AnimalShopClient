@@ -11,19 +11,21 @@ import { MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { AdvertisementDetailComponent } from './advertisement-detail/advertisement-detail.component';
 
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
 
-import { CommonModule } from '@angular/common';  
+import { CommonModule } from '@angular/common';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import {MatIconModule} from '@angular/material/icon';
-import { TopMenuComponent } from './top-menu/top-menu.component';
-import { AdvertisementPostingComponent } from './advertisement-posting/advertisement-posting.component';
+
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import { AdvertisementDetailComponent } from './components/advertisement-detail/advertisement-detail.component';
+import { TopMenuComponent } from './components/top-menu/top-menu.component';
+import { AdvertisementPostingComponent } from './components/advertisement-posting/advertisement-posting.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -42,7 +44,7 @@ import {MatSelectModule} from '@angular/material/select';
     ModalModule,
     CommonModule,
     MatIconModule,
-    MatButtonModule, 
+    MatButtonModule,
     MatCheckboxModule,
     MatInputModule,
     BrowserAnimationsModule,
@@ -51,8 +53,10 @@ import {MatSelectModule} from '@angular/material/select';
     MatToolbarModule,
     HttpClientModule,
     MatFormFieldModule,
-    MatSelectModule
-    
+    MatSelectModule,
+    ReactiveFormsModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

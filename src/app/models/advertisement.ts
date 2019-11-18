@@ -6,7 +6,7 @@ export class Advertisement  {
         public description: String,
         public price: number,
         public animalBeingSold: Animal
-            ){}//
+            ){}
 
 
 }

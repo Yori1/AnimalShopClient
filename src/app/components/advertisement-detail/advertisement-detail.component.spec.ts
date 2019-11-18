@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
 import { AdvertisementDetailComponent } from './advertisement-detail.component';
-import { AppRoutingModule } from '../app-routing.module';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 describe('AdvertisementDetailComponent', () => {
   let component: AdvertisementDetailComponent;

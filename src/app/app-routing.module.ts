@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AdvertisementDetailComponent } from './advertisement-detail/advertisement-detail.component';
-import { AdvertisementPostingComponent } from './advertisement-posting/advertisement-posting.component';
+import { AdvertisementPostingComponent } from './components/advertisement-posting/advertisement-posting.component';
+import { AdvertisementDetailComponent } from './components/advertisement-detail/advertisement-detail.component';
+
 
 
 const routes: Routes = [
