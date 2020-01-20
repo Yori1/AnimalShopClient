@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { AbstractWebDriver } from 'protractor/built/browser';
 import { Advertisement } from 'src/app/models/advertisement';
 import { Animal } from 'src/app/models/animal';
+import { AdvertisementPostingRequest } from './advertisement.posting.model';
 
 @Component({
   selector: 'app-advertisement-posting',
@@ -25,10 +26,10 @@ export class AdvertisementPostingComponent implements OnInit {
   }
 
   onSubmit() {
+    let objectToPost: AdvertisementPostingRequest = this.formGroup.value;
+    this.formGroup.value.id = 1;
     console.log(JSON.stringify(this.formGroup.value));
-    let animal = new Animal(undefined, this.formGroup.get("name").value, this.formGroup.get("kind").value);
-    let ad = new Advertisement(undefined, this.formGroup.get("description").value, this.formGroup.get("price").value, animal);
-    this.advertisementPostingService.postAdvertisement(ad).subscribe(r => console.log(r.locationAdvertisement));
+    this.advertisementPostingService.postAdvertisement(objectToPost).subscribe(r => console.log(r.locationAdvertisement));
 
   }
 
